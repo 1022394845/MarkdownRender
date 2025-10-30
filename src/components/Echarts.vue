@@ -17,7 +17,6 @@ function parseEChartsOption(str) {
     cleanedStr = cleanedStr.replace(/(\w+)\s*:/g, '"$1":')
     return JSON.parse(cleanedStr)
   } catch (error) {
-    console.error('Failed to parse ECharts option:', error)
     return null
   }
 }

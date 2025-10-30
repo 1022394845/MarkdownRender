@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe 测试页面</title>
+    <style>
+        /* 清晰的样式，便于识别 iframe 区域 */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .test-container {
+            border: 2px solid #4299e1;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2d3748;
+            margin-top: 0;
+        }
+        .test-btn {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .test-btn:hover {
+            background-color: #3182ce;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>✅ iframe 测试页面</h1>
+        <p>这是用于验证 iframe 加载的本地测试页面</p>
+        <p>当前时间：<span id="time"></span></p>
+        <button class="test-btn" onclick="alert('iframe 内交互正常！')">点击测试交互</button>
+    </div>
+</body>
+</html>

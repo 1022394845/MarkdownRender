@@ -24,7 +24,11 @@ const selfCodeXRender = {
 
 <template>
   <div class="markdown-render" ref="container">
-    <XMarkdown :markdown="content" :code-x-render="selfCodeXRender" />
+    <XMarkdown
+      :markdown="content"
+      :code-x-render="selfCodeXRender"
+      :allow-html="true"
+    />
   </div>
 </template>
 

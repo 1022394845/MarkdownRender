@@ -58,6 +58,15 @@ $$
 F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i\omega t} dt
 $$
 
+### iframe
+<iframe 
+  src="/test.html" 
+  width="100%" 
+  height="300px" 
+  frameborder="1" 
+  title="测试 iframe"
+></iframe>
+
 ### ECharts 图表
 #### 柱状图
 ```echarts

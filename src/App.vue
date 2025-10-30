@@ -73,7 +73,7 @@ const stopStream = () => {
 <style scoped>
 main {
   width: 800px;
-  height: 80vh;
+  height: 100%;
   margin: 50px auto 0;
 
   .option {
@@ -85,7 +85,7 @@ main {
 
   .markdown-render {
     width: 100%;
-    max-height: 80%;
+    max-height: 80vh;
     overflow-y: auto;
     scrollbar-width: thin;
   }
