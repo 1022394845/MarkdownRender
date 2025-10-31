@@ -1,5 +1,5 @@
 <script setup>
-import { ref, useTemplateRef } from 'vue'
+import { ref, useTemplateRef, nextTick } from 'vue'
 import { streamReadByChar } from '@/utils/streamReader'
 import MarkdownRender from '@/components/MarkdownRender.vue'
 
@@ -31,11 +31,13 @@ const startStream = async () => {
     50, // 间隔时间（ms）
     (content, isEnd) => {
       streamedContent.value = content
-      containerRef.value.scrollToBottom()
       if (isEnd) {
         loading.value = false
         stopFunction = null // 结束后清空停止函数
       }
+      nextTick(() => {
+        containerRef.value.scrollToBottom()
+      })
     }
   )
 }
@@ -66,6 +68,7 @@ const stopStream = () => {
       class="markdown-render"
       ref="renderContainer"
       :content="streamedContent"
+      :loading="loading"
     ></markdown-render>
   </main>
 </template>

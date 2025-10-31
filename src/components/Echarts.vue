@@ -23,7 +23,11 @@ function parseEChartsOption(str) {
 </script>
 
 <template>
-  <VChart class="chart" :option="parseEChartsOption(option)"></VChart>
+  <VChart
+    class="chart"
+    v-if="parseEChartsOption(option)"
+    :option="parseEChartsOption(option)"
+  ></VChart>
 </template>
 
 <style scoped>
