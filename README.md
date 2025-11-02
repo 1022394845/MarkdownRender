@@ -1,6 +1,6 @@
 # MarkdownRender
 
-This template should help get you started developing with Vue 3 in Vite.
+A markdown renderer for AI chat, implemented based on the Element-Plus-X XMarkdown component, supports intercepting custom code block content and customizing the rendering
 
 ## Recommended IDE Setup
 
