@@ -12,7 +12,7 @@ const containerRef = useTemplateRef('renderContainer')
 
 // 读取本地 Markdown 文件
 const loadLocalMarkdown = async () => {
-  const response = await fetch('/test.md')
+  const response = await fetch('/test2.md')
   return response.text()
 }
 
@@ -27,8 +27,8 @@ const startStream = async () => {
   // 2. 启动流式读取，并保存停止函数
   stopFunction = streamReadByChar(
     fullContent,
-    5, // 每次读取字符数
-    50, // 间隔时间（ms）
+    20, // 每次读取字符数
+    10, // 间隔时间（ms）
     (content, isEnd) => {
       streamedContent.value = content
       if (isEnd) {

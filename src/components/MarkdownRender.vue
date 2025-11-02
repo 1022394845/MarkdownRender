@@ -4,6 +4,7 @@ import { throttle } from '@/utils/throttle'
 import { XMarkdown } from 'vue-element-plus-x'
 import 'katex/dist/katex.min.css' // 数学公式样式
 import Echarts from './Echarts.vue' // 图表组件
+import Htmath from './Htmath.vue'
 
 const props = defineProps({
   content: String,
@@ -24,7 +25,8 @@ defineExpose({ scrollToBottom })
  */
 const selfCodeXRender = {
   // 渲染自定义代码块标识符 echarts, Echarts 是自己封装的Vue组件
-  echarts: (props) => h(Echarts, { option: props.raw.content })
+  echarts: (props) => h(Echarts, { option: props.raw.content }),
+  htmath: (props) => h(Htmath, { content: props.raw.content })
 }
 </script>
 
